@@ -5,9 +5,9 @@ The transformer model is a deep learning model introduced in 2017 that solved so
 
 This is a repository for a transformer architecture project using a T5 model fine-tuned on the SQuAD dataset for the downstream task of question generation.  It will be applied to the task of quiz question generation in education and pedagogy.  
 
+# Data Preparation
 To begin, install the Transformers library from HuggingFace (for the T5 model and the SQuAD dataset), and the NLTK library (for the sentence tokenizer).
 
-# Data Preparation
 I will be using the Stanford Question Answering Dataset (SQuAD) to fine-tune the model. SQuAD is the most canonical dataset for question answering and generation tasks. There are two versions, SQuAD 1.1, and SQuAD 2.0. The first version is a crowdsourced set of 100,000+ questions and answers about various Wikipedia articles. Version 2.0 builds upon this by also including 50,000 questions that look similar to those in the dataset, but actually cannot be answered by the information in the passage. This dataset ensures that models can also handle situations in which there is no answer supported by the paragraph, and know when not to answer.
 
 My exploratory data analysis shows a dataset split that consists of 129,941 training examples, 6,078 dev examples, and 5,915 test examples. By loading and subsetting the SQuAD dataset, we can see that it is a JSON file containing triples, which are combinations of questions, passages, and answers. Each answer is a segment, or span, of the corresponding passage.
